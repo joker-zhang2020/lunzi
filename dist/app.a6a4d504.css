@@ -33,3 +33,7 @@
 .g-button:focus {
   outline: none;
 }
+.g-icon[data-v-256a7d] {
+  width: 1em;
+  height: 1em;
+}
