@@ -5,7 +5,15 @@
 </template>
 
 <script>
-
+    export default {
+        mounted() {
+            for(node of this.$el.children){
+                if(node.nodeName.toLowerCase() !== 'button'){
+                    console.warn(`g-button-group 的自元素应该全是 g-button ，但是你写的是 ${name}`)
+                }
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
