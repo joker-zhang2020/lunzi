@@ -15,3 +15,63 @@ new Vue({
         loading3:false
     }
 })
+
+
+
+import chai from 'chai'
+const expect = chai.expect
+
+{
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({propsData:{icon:'setting'}})
+    vm.$mount()
+    let useElement = vm.$el.querySelector('use')
+    let href = useElement.getAttribute('xlink:href')
+    expect(href).to.eq('#isetting')
+    vm.$el.remove()
+    vm.$destroy()
+}
+{
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({propsData:{icon:'setting',loading:true}})
+    vm.$mount()
+    let useElement = vm.$el.querySelector('use')
+    let href = useElement.getAttribute('xlink:href')
+    expect(href).to.eq('#iloading')
+    vm.$el.remove()
+    vm.$destroy()
+}
+{
+    const div = decument.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({propsData:{icon:'setting'}})
+    vm.$mount(div)
+    let svg = vm.$el.querySelector('svg')
+    let {order} = window.getComputedStyle(svg)
+    expect(order).to.eq('1')
+    vm.$el.remove()
+    vm.$destroy()
+}
+{
+    const div = decument.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({propsData:{icon:'setting',iconPosition:'right'}})
+    vm.$mount(div)
+    let svg = vm.$el.querySelector('svg')
+    let {order} = window.getComputedStyle(svg)
+    expect(order).to.eq('2')
+    vm.$el.remove()
+    vm.$destroy()
+}
+{
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({propsData:{icon:'setting'}})
+    vm.$mount(div)
+    vm.$on('click',function(){
+        console.log(1)
+    })
+    let button = vm.$el.querySelector('button')
+    button.click()
+}

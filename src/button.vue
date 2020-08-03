@@ -16,8 +16,8 @@
         props:{
             icon:{},
             loading:{
-                    type:Boolean,
-                    default: false
+                type:Boolean,
+                default: false
             },
             iconPosition:{
                 default:'left',
