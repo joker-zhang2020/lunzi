@@ -28,6 +28,7 @@ try {
 
     // 单元测试
     {
+        '可以设置 icon'
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
@@ -93,6 +94,7 @@ try {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
+
                 icon: 'settings',
             }
         })
