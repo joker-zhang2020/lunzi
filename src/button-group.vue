@@ -6,6 +6,7 @@
 
 <script>
     export default {
+        name:'lunzi-buttonGroup',
         mounted() {
             for(let node of this.$el.children){
                 if(node.nodeName.toLowerCase() !== 'button'){
