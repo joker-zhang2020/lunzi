@@ -4,6 +4,12 @@
     </div>
 </template>
 
+<script>
+    export default {
+        name: 'lunziFooter'
+    }
+</script>
+
 <style lang="scss" scoped>
     .footer {
     }

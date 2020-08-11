@@ -4,6 +4,11 @@
     </div>
 </template>
 
+<script>
+    export default {
+        name: 'lunziHeader'
+    }
+</script>
 <style lang="scss" scoped>
     .header {
     }

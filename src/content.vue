@@ -1,11 +1,17 @@
 <template>
-    <div class="content">
+    <div class="lunzi-content">
         <slot></slot>
     </div>
 </template>
 
+<script>
+    export default {
+        name: 'lunziContent'
+    }
+</script>
+
 <style lang="scss" scoped>
-    .content {
+    .lunzi-content {
         flex-grow: 1;
     }
 </style>

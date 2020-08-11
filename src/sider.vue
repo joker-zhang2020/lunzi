@@ -1,9 +1,9 @@
 <template>
     <transition name="slide">
         <div class="sider" v-if="visible">
-        <slot></slot>
+            <slot></slot>
             <button @click="visible=false">close</button>
-    </div>
+        </div>
     </transition>
 </template>
 <script>

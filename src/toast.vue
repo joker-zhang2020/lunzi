@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="toastClasses">
+    <div class="lunzi-toast" :class="toastClasses">
         <div class="toast" ref="toast">
             <div class="message">
                 <slot v-if="!enableHtml"></slot>
@@ -13,6 +13,7 @@
     </div>
 </template>
 <script>
+    //构造组件的选项
     export default {
         name: 'lunziToast',
         props: {
@@ -98,7 +99,7 @@
         0% {opacity: 0; }
         100% {opacity: 1;}
     }
-    .wrapper {
+    .lunzi-toast {
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -138,6 +139,7 @@
         .close {
             padding-left: 16px;
             flex-shrink: 0;
+            cursor: pointer;
         }
         .line {
             height: 100%;

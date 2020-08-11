@@ -6,10 +6,11 @@
 <script>
     import Vue from 'vue'
     export default {
-        name: 'GuluTabs',
+        name: 'lunziTabs',
         props: {
             selected: {
                 type: String,
+                default: 1,
                 required: true
             },
             direction: {
@@ -56,7 +57,3 @@
         }
     }
 </script>
-<style>
-    .tabs {
-    }
-</style>
